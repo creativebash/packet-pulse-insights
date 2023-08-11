@@ -1,4 +1,4 @@
-# FastAPI SIEM Tool
+# FastAPI Web-Based SIEM Tool
 
 This is a simple web-based SIEM (Security Information and Event Management) tool built using FastAPI.
 
