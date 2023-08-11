@@ -19,7 +19,7 @@ This is a simple web-based SIEM (Security Information and Event Management) tool
 2. Clone this repository and navigate to the project directory:
 
     ```bash
-    git clone https://github.com/your_username/packet-pulse-insights.git
+    git clone https://github.com/creativebash/packet-pulse-insights.git
     cd packet-pulse-insights
     ```
 
