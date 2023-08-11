@@ -145,7 +145,7 @@ class Model:
             "target_ip": "10.0.0.5",
             "status_code": 403,
         },
-        # Add more sample events here...
+        # Add more sample events here... this can work
     ]
 
     welcomeMsg = {"message": "Welcome to the SIEM Tool!"}
