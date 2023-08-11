@@ -1,6 +1,6 @@
-# FastAPI SIEM Tool
+# Real-Time Network traffic visualization Web App with Python FastAPI
 
-This is a simple web-based SIEM (Security Information and Event Management) tool built using FastAPI.
+Network traffic visualization web app that offers real-time analysis and visualization of network data. Built with Python
 
 ## Requirements
 
@@ -19,8 +19,8 @@ This is a simple web-based SIEM (Security Information and Event Management) tool
 2. Clone this repository and navigate to the project directory:
 
     ```bash
-    git clone https://github.com/your_username/siem_project.git
-    cd siem_project
+    git clone https://github.com/creativebash/packet-pulse-insights.git
+    cd packet-pulse-insights
     ```
 
 3. Run the FastAPI application using Uvicorn:
