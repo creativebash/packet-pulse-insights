@@ -1,4 +1,4 @@
-# Network traffic visualization with Python FastAPI
+# Real-Time Network traffic visualization Web App with Python FastAPI
 
 This is a simple web-based SIEM (Security Information and Event Management) tool built using FastAPI.
 
