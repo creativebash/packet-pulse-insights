@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SIEM Tool</title>
+    <!-- <link rel="stylesheet" href="/static/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Web-based SIEM Tool</h1>
+    <!-- A container for the Plotly chart -->
+    <div id="plotly-chart"></div>
+
+    <div>
+        <h1>WebSocket Chat</h1>
+        <form action="" onsubmit="sendMessage(event)">
+            <input type="text" id="messageText" autocomplete="off"/>
+            <button>Send</button>
+        </form>
+        <ul id='messages'>
+        </ul>
+    </div>
+    
+    <div id="events">
+        <ul id="event-list">
+            <!-- Loop through events using Jinja2 templating -->
+            {% for event in captured_events %}
+                <li>
+                    {% for key, value in event.items() %}
+                        <strong> {{ key }} :</strong> {{ value }} <br>
+                    {% endfor %}
+                    <hr>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        // Create an initial trace
+        const initialTrace = {
+            x: [],
+            y: [],
+            mode: 'markers',
+            type: 'bar'  // Add the appropriate chart type
+        };
+
+        // Create the Plotly chart
+        const plotlyChartDiv = document.getElementById("plotly-chart");
+        Plotly.newPlot(plotlyChartDiv, [initialTrace]);
+
+        // Define a function to update the chart
+        async function updateChart() {
+            // Fetch new data from the server using an API endpoint
+            const response = await fetch('/get_new_data');
+            const newData = await response.json();
+
+            // Ensure newData.x_data and newData.y_data are arrays
+            const xData = Array.isArray(newData.x_data) ? newData.x_data : [];
+            const yData = Array.isArray(newData.y_data) ? newData.y_data : [];
+
+            // Create an update object for the trace
+            const update = {
+                x: [xData],
+                y: [yData]
+            };
+
+        const layoutUpdate = {
+            title: `Updated Event Type Distribution`,
+            xaxis: {
+                title: "Event Type",
+            },
+            yaxis: {
+                title: "Count",
+            }
+        };
+            // Apply the update to the chart
+            Plotly.update(plotlyChartDiv, update, layoutUpdate, 0); // Update the first (and only) trace
+        }
+        // Update the chart every 5 seconds
+        setInterval(updateChart, 5000);
+        
+        // var ws = new WebSocket("ws://localhost:8000/ws");
+        // ws.onmessage = function(event) {
+        //     var messages = document.getElementById('messages')
+        //     var message = document.createElement('li')
+        //     var content = document.createTextNode(event.data)
+        //     message.appendChild(content)
+        //     messages.appendChild(message)
+        // };
+        // function sendMessage(event) {
+        //     var input = document.getElementById("messageText")
+        //     ws.send(input.value)
+        //     input.value = ''
+        //     event.preventDefault()
+        // }
+    </script>
+</body>
+</html>
