@@ -148,4 +148,4 @@ class Model:
         # Add more sample events here... this can work
     ]
 
-    welcomeMsg = {"message": "Welcome to the SIEM Tool!"}
+    welcomeMsg = {"message": "Welcome to the SIEM Tool!"} # default message
