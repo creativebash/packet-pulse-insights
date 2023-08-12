@@ -1,4 +1,4 @@
-# Real-Time Network traffic visualization Web App with Python FastAPI
+# Real-Time Web-based Network Traffic Visualization and Analysis
 
 Network traffic visualization web app that offers real-time analysis and visualization of network data. Built with Python
 
