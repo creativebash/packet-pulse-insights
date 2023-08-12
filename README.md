@@ -2,6 +2,7 @@
 
 Network traffic visualization web app that offers real-time analysis and visualization of network data. Built with Python
 ![Screenshot of network traffic insight page](https://github.com/creativebash/packet-pulse-insights/blob/main/Screenshot.png)
+
 ## Requirements
 
 - Python (>=3.7)
