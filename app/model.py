@@ -1,5 +1,6 @@
 from scapy.all import sniff, IP, TCP, UDP, ICMP, Raw
 import plotly.graph_objs as go
+from .logger_file import logger
 
 # import plotly.express as px
 
@@ -91,6 +92,7 @@ class Model:
     def capture_packets(self, interface):
         # Start packet capturing on the specified network interface
         sniff(iface=interface, prn=self.packet_handler, filter="", store=False)
+        logger.info('New packets have been captured')
     
     def get_events_type_data(self):
         event_type_data = {}
