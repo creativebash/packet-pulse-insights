@@ -1,1 +1,2 @@
-app/output.log
+# Ignore log files
+*.log

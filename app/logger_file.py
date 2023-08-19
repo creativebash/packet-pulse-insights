@@ -14,6 +14,7 @@ file_handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(message
 logger.addHandler(file_handler)
 
 # Log a message
-logger.info('This is an info message')
-logger.warning('This is a warning message')
-logger.error('This is an error message')
+
+logger.info('Logging session started for new instance...')
+logger.warning('This is a warning message [sample]')
+logger.error('This is an error message [sample]')
