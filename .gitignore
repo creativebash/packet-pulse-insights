@@ -1,2 +1,3 @@
 # Ignore log files
+/myvenv
 *.log
