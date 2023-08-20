@@ -35,7 +35,7 @@ Network traffic visualization web app that offers real-time analysis and visuali
     uvicorn main:app --reload
     ```
 
-5. Open your web browser and visit `http://127.0.0.1:8000/` to access the SIEM tool.
+5. Open your web browser and visit `http://127.0.0.1:8000/web/events` to access the SIEM tool.
 
 ## Features
 
