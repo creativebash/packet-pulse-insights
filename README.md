@@ -1,36 +1,41 @@
 # Real-Time Web-based Network Traffic Visualization and Analysis
 
-Network traffic visualization web app that offers real-time analysis and visualization of network data. Built with Python
+Network traffic visualization web app that offers real-time analysis and visualization of network data. Built with Python.
 ![Screenshot of network traffic insight page](https://github.com/creativebash/packet-pulse-insights/blob/main/Screenshot.png)
 
 ## Requirements
 
 - Python (>=3.7)
-- FastAPI
-- Uvicorn
 
 ## Getting Started
 
-1. Install the required packages using the following command:
-
-    ```bash
-    pip install fastapi uvicorn
-    ```
-
-2. Clone this repository and navigate to the project directory:
+1. Clone this repository and navigate to the project directory:
 
     ```bash
     git clone https://github.com/creativebash/packet-pulse-insights.git
     cd packet-pulse-insights
     ```
 
-3. Run the FastAPI application using Uvicorn:
+2. Create and activate a virtual environment (recommended):
+
+    ```bash
+    python -m venv venv
+    source venv/bin/activate
+    ```
+
+3. Install the required packages using pip:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Run the FastAPI application using Uvicorn:
 
     ```bash
     uvicorn main:app --reload
     ```
 
-4. Open your web browser and visit `http://127.0.0.1:8000/` to access the SIEM tool.
+5. Open your web browser and visit `http://127.0.0.1:8000/` to access the SIEM tool.
 
 ## Features
 
