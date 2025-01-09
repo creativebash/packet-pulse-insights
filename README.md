@@ -45,3 +45,4 @@ Network traffic visualization web app that offers real-time analysis and visuali
 ## Notes
 
 - This is a basic proof-of-concept. For a real-world SIEM tool, data collection, correlation, and alerting mechanisms should be more comprehensive.
+- It can further be tested and explored
